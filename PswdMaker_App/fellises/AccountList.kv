@@ -1,0 +1,39 @@
+<AccountList>
+    BoxLayout:
+        orientation: 'vertical'
+        Label:
+            text: '계정 목록'
+            font_size: '30dp'
+        BoxLayout:
+            Label:
+                text: '주소'
+            Label:
+                text: '아이디'
+            Label:
+                text: '비밀번호'
+        ScrollLayout:
+            size_hint_y: 0.2
+            scroll_type: ['bars', 'content']
+            scroll_orientation: ['vertical']
+            scroll_wheel_distance: 100
+            GridLayout:
+                id: accountList
+                cols: 3
+                size_hint_y: None
+                height: self.minimum_height
+        BoxLayout:
+            size_hint_y: 0.4
+            Button:
+                text: '계정 추가'
+                on_press: root.createAccount()
+            Button:
+                text: '계정 삭제'
+                on_press: root.deleteAccount()
+        BoxLayout:
+            size_hint_y: 0.4
+            Button:
+                text: '비밀번호 생성'
+                on_press: root.generatePassword()
+            Button:
+                text: '비밀번호 설정'
+                on_press: root.manager.current = 'pswdSettings'
