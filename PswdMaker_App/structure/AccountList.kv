@@ -1,4 +1,5 @@
 <AccountList>
+    on_pre_enter: root.loadAccountList()
     BoxLayout:
         orientation: 'vertical'
         Label:
@@ -11,11 +12,10 @@
                 text: '아이디'
             Label:
                 text: '비밀번호'
-        ScrollLayout:
+        ScrollView:
             size_hint_y: 0.2
-            scroll_type: ['bars', 'content']
-            scroll_orientation: ['vertical']
-            scroll_wheel_distance: 100
+            do_scroll_x: False
+            do_scroll_y: True
             GridLayout:
                 id: accountList
                 cols: 3

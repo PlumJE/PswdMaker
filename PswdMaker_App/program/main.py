@@ -6,22 +6,23 @@
 """
 
 
+from pathlib import Path
+from traceback import format_exc
 from kivy.app import App
 from kivy.lang import Builder
 from kivy.uix.screenmanager import ScreenManager
-from traceback import format_exc
 
-from organs.Logger import logger
-from organs.AccountList import AccountList
-from organs.PswdSettings import PasswordSettings
+from Logger import logger
+from AccountList import AccountList
+from PasswordSettings import PasswordSettings
 
 
 # 앱 전체를 나타내는 클래스
 class PswdMakerApp(App):
     # 앱을 그린다
     def build(self):
-        Builder.load_file('./felises/AccountList.kv')
-        Builder.load_file('./felises/PasswordSettings.kv')
+        Builder.load_file(str(Path(__file__).resolve().parent.parent) + '/structure/AccountList.kv')
+        Builder.load_file(str(Path(__file__).resolve().parent.parent) + '/structure/PasswordSettings.kv')
 
         self.__accountListScreen = AccountList()
         self.__pswdSettingsScreen = PasswordSettings()

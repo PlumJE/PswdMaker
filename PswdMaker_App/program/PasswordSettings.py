@@ -15,7 +15,7 @@ from kivy.uix.screenmanager import Screen
 class PasswordSettings(Screen):
     __candidates = ''
     __length = 0
-    name = 'pswdSettings'
+    name = '비밀번호 생성 설정'
 
     # 반드시 추가할 문자들을 설정
     def __includeCandidates(self):
@@ -63,17 +63,17 @@ class PasswordSettings(Screen):
     def saveSettings(self, **kwargs):
         pswd_candidates = self.__includeCandidates()
         if pswd_candidates == None:
-            Popup(title='Error!', content=Label(text="Ye must include at least one character type."), size_hint = (1, 0.2), auto_dismiss = True).open()
+            Popup(title='오류!', content=Label(text="올바른 필수문자를 입력하세요.."), size_hint = (1, 0.2), auto_dismiss = True).open()
             return
         
         pswd_candidates = self.__excludeCandidates(pswd_candidates)
         if pswd_candidates == None:
-            Popup(title='Error!', content=Label(text="Ye must exclude valid character type."), size_hint = (1, 0.2), auto_dismiss = True).open()
+            Popup(title='오류!', content=Label(text="올바른 제외문자를 입력하세요."), size_hint = (1, 0.2), auto_dismiss = True).open()
             return
 
         length = self.__setLength()
         if length == None:
-            Popup(title='Error!', content=Label(text="The length must be valid integer."), size_hint = (1, 0.2), auto_dismiss = True).open()
+            Popup(title='오류!', content=Label(text="올바른 숫자를 입력하세요."), size_hint = (1, 0.2), auto_dismiss = True).open()
             return
         
         self.__candidates = pswd_candidates

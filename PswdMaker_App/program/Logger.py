@@ -7,7 +7,7 @@
 
 
 import logging
-from traceback import format_exc
+from pathlib import Path
 
 
 # logger객체 생성
@@ -15,5 +15,5 @@ logger = logging.getLogger()
 logger.setLevel(logging.ERROR)
 
 # logger의 로그를 파일에 저장하게 설정
-file_handler = logging.FileHandler("PswdMaker.log")
+file_handler = logging.FileHandler(str(Path(__file__).resolve().parent.parent) + '/PswdMaker.log')
 logger.addHandler(file_handler)

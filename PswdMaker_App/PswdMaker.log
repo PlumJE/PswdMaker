@@ -1,0 +1,184 @@
+Window: Provider: sdl2
+GL: Using the "OpenGL" graphics system
+GL: GLEW initialization succeeded
+GL: Backend used <glew>
+GL: OpenGL version <b'4.6.0 - Build 32.0.101.6874'>
+GL: OpenGL vendor <b'Intel'>
+GL: OpenGL renderer <b'Intel(R) Iris(R) Xe Graphics'>
+GL: OpenGL parsed version: 4, 6
+GL: Shading version <b'4.60 - Build 32.0.101.6874'>
+GL: Texture max size <16384>
+GL: Texture max units <32>
+Window: auto add sdl2 input provider
+Window: virtual keyboard not allowed, single mode, not docked
+Text: Provider: sdl2
+Traceback (most recent call last):
+  File "D:\vscode-workspace\PswdMaker\PswdMaker_App\program\main.py", line 37, in <module>
+    PswdMakerApp().run()
+  File "C:\Users\lje64\AppData\Local\Programs\Python\Python312\Lib\site-packages\kivy\app.py", line 955, in run
+    self._run_prepare()
+  File "C:\Users\lje64\AppData\Local\Programs\Python\Python312\Lib\site-packages\kivy\app.py", line 925, in _run_prepare
+    root = self.build()
+           ^^^^^^^^^^^^
+  File "D:\vscode-workspace\PswdMaker\PswdMaker_App\program\main.py", line 24, in build
+    Builder.load_file('../structure/PasswordSettings.kv')
+  File "C:\Users\lje64\AppData\Local\Programs\Python\Python312\Lib\site-packages\kivy\lang\builder.py", line 308, in load_file
+    with open(filename, 'r', encoding=encoding) as fd:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../structure/PasswordSettings.kv'
+
+Window: Provider: sdl2
+GL: Using the "OpenGL" graphics system
+GL: GLEW initialization succeeded
+GL: Backend used <glew>
+GL: OpenGL version <b'4.6.0 - Build 32.0.101.6874'>
+GL: OpenGL vendor <b'Intel'>
+GL: OpenGL renderer <b'Intel(R) Iris(R) Xe Graphics'>
+GL: OpenGL parsed version: 4, 6
+GL: Shading version <b'4.60 - Build 32.0.101.6874'>
+GL: Texture max size <16384>
+GL: Texture max units <32>
+Window: auto add sdl2 input provider
+Window: virtual keyboard not allowed, single mode, not docked
+Text: Provider: sdl2
+Traceback (most recent call last):
+  File "D:\vscode-workspace\PswdMaker\PswdMaker_App\program\main.py", line 37, in <module>
+    PswdMakerApp().run()
+  File "C:\Users\lje64\AppData\Local\Programs\Python\Python312\Lib\site-packages\kivy\app.py", line 955, in run
+    self._run_prepare()
+  File "C:\Users\lje64\AppData\Local\Programs\Python\Python312\Lib\site-packages\kivy\app.py", line 925, in _run_prepare
+    root = self.build()
+           ^^^^^^^^^^^^
+  File "D:\vscode-workspace\PswdMaker\PswdMaker_App\program\main.py", line 24, in build
+    Builder.load_file('../structure/PasswordSettings.kv')
+  File "C:\Users\lje64\AppData\Local\Programs\Python\Python312\Lib\site-packages\kivy\lang\builder.py", line 308, in load_file
+    with open(filename, 'r', encoding=encoding) as fd:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../structure/PasswordSettings.kv'
+
+Window: Provider: sdl2
+GL: Using the "OpenGL" graphics system
+GL: GLEW initialization succeeded
+GL: Backend used <glew>
+GL: OpenGL version <b'4.6.0 - Build 32.0.101.6874'>
+GL: OpenGL vendor <b'Intel'>
+GL: OpenGL renderer <b'Intel(R) Iris(R) Xe Graphics'>
+GL: OpenGL parsed version: 4, 6
+GL: Shading version <b'4.60 - Build 32.0.101.6874'>
+GL: Texture max size <16384>
+GL: Texture max units <32>
+Window: auto add sdl2 input provider
+Window: virtual keyboard not allowed, single mode, not docked
+Text: Provider: sdl2
+Traceback (most recent call last):
+  File "D:\vscode-workspace\PswdMaker\PswdMaker_App\program\main.py", line 37, in <module>
+    PswdMakerApp().run()
+  File "C:\Users\lje64\AppData\Local\Programs\Python\Python312\Lib\site-packages\kivy\app.py", line 955, in run
+    self._run_prepare()
+  File "C:\Users\lje64\AppData\Local\Programs\Python\Python312\Lib\site-packages\kivy\app.py", line 925, in _run_prepare
+    root = self.build()
+           ^^^^^^^^^^^^
+  File "D:\vscode-workspace\PswdMaker\PswdMaker_App\program\main.py", line 26, in build
+    self.__accountListScreen = AccountList()
+                               ^^^^^^^^^^^^^
+  File "C:\Users\lje64\AppData\Local\Programs\Python\Python312\Lib\site-packages\kivy\uix\relativelayout.py", line 274, in __init__
+    super(RelativeLayout, self).__init__(**kw)
+  File "C:\Users\lje64\AppData\Local\Programs\Python\Python312\Lib\site-packages\kivy\uix\floatlayout.py", line 65, in __init__
+    super(FloatLayout, self).__init__(**kwargs)
+  File "C:\Users\lje64\AppData\Local\Programs\Python\Python312\Lib\site-packages\kivy\uix\layout.py", line 76, in __init__
+    super(Layout, self).__init__(**kwargs)
+  File "C:\Users\lje64\AppData\Local\Programs\Python\Python312\Lib\site-packages\kivy\uix\widget.py", line 366, in __init__
+    self.apply_class_lang_rules(
+  File "C:\Users\lje64\AppData\Local\Programs\Python\Python312\Lib\site-packages\kivy\uix\widget.py", line 470, in apply_class_lang_rules
+    Builder.apply(
+  File "C:\Users\lje64\AppData\Local\Programs\Python\Python312\Lib\site-packages\kivy\lang\builder.py", line 545, in apply
+    self._apply_rule(
+  File "C:\Users\lje64\AppData\Local\Programs\Python\Python312\Lib\site-packages\kivy\lang\builder.py", line 667, in _apply_rule
+    self._apply_rule(
+  File "C:\Users\lje64\AppData\Local\Programs\Python\Python312\Lib\site-packages\kivy\lang\builder.py", line 625, in _apply_rule
+    cls = Factory_get(cname)
+          ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lje64\AppData\Local\Programs\Python\Python312\Lib\site-packages\kivy\factory.py", line 147, in __getattr__
+    raise FactoryException('Unknown class <%s>' % name)
+kivy.factory.FactoryException: Unknown class <ScrollLayout>
+
+Window: Provider: sdl2
+GL: Using the "OpenGL" graphics system
+GL: GLEW initialization succeeded
+GL: Backend used <glew>
+GL: OpenGL version <b'4.6.0 - Build 32.0.101.6874'>
+GL: OpenGL vendor <b'Intel'>
+GL: OpenGL renderer <b'Intel(R) Iris(R) Xe Graphics'>
+GL: OpenGL parsed version: 4, 6
+GL: Shading version <b'4.60 - Build 32.0.101.6874'>
+GL: Texture max size <16384>
+GL: Texture max units <32>
+Window: auto add sdl2 input provider
+Window: virtual keyboard not allowed, single mode, not docked
+Text: Provider: sdl2
+Traceback (most recent call last):
+  File "D:\vscode-workspace\PswdMaker\PswdMaker_App\program\main.py", line 37, in <module>
+    PswdMakerApp().run()
+  File "C:\Users\lje64\AppData\Local\Programs\Python\Python312\Lib\site-packages\kivy\app.py", line 955, in run
+    self._run_prepare()
+  File "C:\Users\lje64\AppData\Local\Programs\Python\Python312\Lib\site-packages\kivy\app.py", line 925, in _run_prepare
+    root = self.build()
+           ^^^^^^^^^^^^
+  File "D:\vscode-workspace\PswdMaker\PswdMaker_App\program\main.py", line 26, in build
+    self.__accountListScreen = AccountList()
+                               ^^^^^^^^^^^^^
+  File "C:\Users\lje64\AppData\Local\Programs\Python\Python312\Lib\site-packages\kivy\uix\relativelayout.py", line 274, in __init__
+    super(RelativeLayout, self).__init__(**kw)
+  File "C:\Users\lje64\AppData\Local\Programs\Python\Python312\Lib\site-packages\kivy\uix\floatlayout.py", line 65, in __init__
+    super(FloatLayout, self).__init__(**kwargs)
+  File "C:\Users\lje64\AppData\Local\Programs\Python\Python312\Lib\site-packages\kivy\uix\layout.py", line 76, in __init__
+    super(Layout, self).__init__(**kwargs)
+  File "C:\Users\lje64\AppData\Local\Programs\Python\Python312\Lib\site-packages\kivy\uix\widget.py", line 366, in __init__
+    self.apply_class_lang_rules(
+  File "C:\Users\lje64\AppData\Local\Programs\Python\Python312\Lib\site-packages\kivy\uix\widget.py", line 470, in apply_class_lang_rules
+    Builder.apply(
+  File "C:\Users\lje64\AppData\Local\Programs\Python\Python312\Lib\site-packages\kivy\lang\builder.py", line 545, in apply
+    self._apply_rule(
+  File "C:\Users\lje64\AppData\Local\Programs\Python\Python312\Lib\site-packages\kivy\lang\builder.py", line 667, in _apply_rule
+    self._apply_rule(
+  File "C:\Users\lje64\AppData\Local\Programs\Python\Python312\Lib\site-packages\kivy\lang\builder.py", line 625, in _apply_rule
+    cls = Factory_get(cname)
+          ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lje64\AppData\Local\Programs\Python\Python312\Lib\site-packages\kivy\factory.py", line 147, in __getattr__
+    raise FactoryException('Unknown class <%s>' % name)
+kivy.factory.FactoryException: Unknown class <ScrollLayout>
+
+Window: Provider: sdl2
+GL: Using the "OpenGL" graphics system
+GL: GLEW initialization succeeded
+GL: Backend used <glew>
+GL: OpenGL version <b'4.6.0 - Build 32.0.101.6874'>
+GL: OpenGL vendor <b'Intel'>
+GL: OpenGL renderer <b'Intel(R) Iris(R) Xe Graphics'>
+GL: OpenGL parsed version: 4, 6
+GL: Shading version <b'4.60 - Build 32.0.101.6874'>
+GL: Texture max size <16384>
+GL: Texture max units <32>
+Window: auto add sdl2 input provider
+Window: virtual keyboard not allowed, single mode, not docked
+Text: Provider: sdl2
+Base: Start application main loop
+GL: NPOT texture support is available
+Base: Leaving application in progress...
+Window: Provider: sdl2
+GL: Using the "OpenGL" graphics system
+GL: GLEW initialization succeeded
+GL: Backend used <glew>
+GL: OpenGL version <b'4.6.0 - Build 32.0.101.6874'>
+GL: OpenGL vendor <b'Intel'>
+GL: OpenGL renderer <b'Intel(R) Iris(R) Xe Graphics'>
+GL: OpenGL parsed version: 4, 6
+GL: Shading version <b'4.60 - Build 32.0.101.6874'>
+GL: Texture max size <16384>
+GL: Texture max units <32>
+Window: auto add sdl2 input provider
+Window: virtual keyboard not allowed, single mode, not docked
+Text: Provider: sdl2
+Base: Start application main loop
+GL: NPOT texture support is available
+Base: Leaving application in progress...

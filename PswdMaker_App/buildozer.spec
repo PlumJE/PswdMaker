@@ -1,7 +1,7 @@
 [app]
 
 # (str) Title of your application
-title = Password Maker!
+title = 비밀번호 관리앱
 
 # (str) Package name
 package.name = Password_Maker
@@ -10,7 +10,7 @@ package.name = Password_Maker
 package.domain = org.test
 
 # (str) Source code where the main.py live
-source.dir = .
+source.dir = ./program/
 
 # (list) Source files to include (let empty to include all the files)
 source.include_exts = py,png,jpg,kv,atlas
@@ -29,7 +29,7 @@ source.include_exts = py,png,jpg,kv,atlas
 #source.exclude_patterns = license,images/*/*.jpg
 
 # (str) Application versioning (method 1)
-version = 0.1
+version = 2.1
 
 # (str) Application versioning (method 2)
 # version.regex = __version__ = ['"](.*)['"]

@@ -6,6 +6,7 @@
 """
 
 
+from pathlib import Path
 from random import choice
 from functools import partial
 from sqlite3 import connect
@@ -15,14 +16,14 @@ from kivy.uix.screenmanager import Screen
 
 # 비밀번호 자동생성 및 관리하는 클래스
 class AccountList(Screen):
-    __dbFilePath = './gijb.sqlite3'
+    __dbFilePath = str(Path(__file__).resolve().parent.parent) + '/database/accountList.sqlite3'
     name = 'accountList'
 
     # 테이블이 있는지 확인하고 없으면 생성한다
     def __ensure_table(self):
-        with connect(self.__dbFilePath) as conn:
-            cur = conn.cursor()
-            cur.execute("""
+        with connect(self.__dbFilePath) as connection:
+            cursor = connection.cursor()
+            cursor.execute("""
                 CREATE TABLE IF NOT EXISTS accountList (
                     num INTEGER PRIMARY KEY AUTOINCREMENT,
                     addr TEXT NOT NULL,
@@ -30,32 +31,32 @@ class AccountList(Screen):
                     pswd TEXT
                 )
             """)
-            conn.commit()
+            connection.commit()
 
     # 계정을 새로 생성한다
     def createAccount(self, **kwargs):
         self.__ensure_table()
-        with connect(self.__dbFilePath) as conn:
-            cur = conn.cursor()
-            cur.execute("INSERT INTO accountList (addr, acc_id, pswd) VALUES (?, ?, ?)", ('', '', ''))
-            conn.commit()
+        with connect(self.__dbFilePath) as connection:
+            cursor = connection.cursor()
+            cursor.execute("INSERT INTO accountList (addr, acc_id, pswd) VALUES (?, ?, ?)", ('', '', ''))
+            connection.commit()
         self.loadAccountList()
 
     # 계정을 삭제한다
     def deleteAccount(self, **kwargs):
-        with connect(self.__dbFilePath) as conn:
-            cur = conn.cursor()
-            cur.execute("DELETE FROM accountList WHERE num=(SELECT MAX(num) FROM accountList)")
-            conn.commit()
+        with connect(self.__dbFilePath) as connection:
+            cursor = connection.cursor()
+            cursor.execute("DELETE FROM accountList WHERE num=(SELECT MAX(num) FROM accountList)")
+            connection.commit()
         self.loadAccountList()
 
     # 계정 목록을 불러온다
     def loadAccountList(self, **kwargs):
         self.__ensure_table()
-        with connect(self.__dbFilePath) as conn:
-            cur = conn.cursor()
-            cur.execute("SELECT num, addr, acc_id, pswd FROM accountList ORDER BY num")
-            rows = cur.fetchall()
+        with connect(self.__dbFilePath) as connection:
+            cursor = connection.cursor()
+            cursor.execute("SELECT num, addr, acc_id, pswd FROM accountList ORDER BY num")
+            rows = cursor.fetchall()
 
         self.ids.accountList.clear_widgets()
         for num, addr, acc_id, pswd in rows:
@@ -87,11 +88,11 @@ class AccountList(Screen):
             return
         
         value = instance.text
-        with connect(self.__dbFilePath) as conn:
-            cur = conn.cursor()
+        with connect(self.__dbFilePath) as connection:
+            cursor = connection.cursor()
             # 컬럼명은 화이트리스트로 검증했으므로 안전하게 포맷
-            cur.execute(f"UPDATE accountList SET {column}=? WHERE num=?", (value, num))
-            conn.commit()
+            cursor.execute(f"UPDATE accountList SET {column}=? WHERE num=?", (value, num))
+            connection.commit()
 
     # 랜덤한 비밀번호를 생성한다
     def generatePassword(self, **kwargs):
@@ -111,10 +112,10 @@ class AccountList(Screen):
             for w in self.ids.accountList.children:
                 if getattr(w, '_num', None) == focused_num and getattr(w, '_col', None) == 'pswd':
                     w.text = password
-                    with connect(self.__dbFilePath) as conn:
-                        cur = conn.cursor()
-                        cur.execute("UPDATE accountList SET pswd=? WHERE num=?", (password, focused_num))
-                        conn.commit()
+                    with connect(self.__dbFilePath) as connection:
+                        cursor = connection.cursor()
+                        cursor.execute("UPDATE accountList SET pswd=? WHERE num=?", (password, focused_num))
+                        connection.commit()
                     break
 
         return password
