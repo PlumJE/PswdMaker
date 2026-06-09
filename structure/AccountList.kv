@@ -1,0 +1,51 @@
+#:import dp kivy.metrics.dp
+
+<AccountList>
+    on_pre_enter: root.loadAccountList()
+    BoxLayout:
+        orientation: 'vertical'
+        Label:
+            text: '계정 목록'
+            font_name: 'Nanum'
+            font_size: '30dp'
+            size_hint_y: None
+        BoxLayout:
+            size_hint_y: None
+            Label:
+                text: '주소'
+                font_name: 'Nanum'
+            Label:
+                text: '아이디'
+                font_name: 'Nanum'
+            Label:
+                text: '비밀번호'
+                font_name: 'Nanum'
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            GridLayout:
+                id: accountList
+                cols: 3
+                size_hint_y: None
+                row_default_height: '50dp'
+                row_force_default: True
+        BoxLayout:
+            size_hint_y: None
+            Button:
+                text: '계정 추가'
+                font_name: 'Nanum'
+                on_press: root.createAccount()
+            Button:
+                text: '계정 삭제'
+                font_name: 'Nanum'
+                on_press: root.deleteAccount()
+        BoxLayout:
+            size_hint_y: None
+            Button:
+                text: '비밀번호 생성'
+                font_name: 'Nanum'
+                on_press: root.generatePassword()
+            Button:
+                text: '비밀번호 설정'
+                font_name: 'Nanum'
+                on_press: root.manager.current = 'pswdSettings'
