@@ -1,7 +1,7 @@
 """
 작성자 : 외기러기
 최초 작성 시작 : 2024-05-03
-최근 작성 완료 : 2026-06-09
+최근 작성 완료 : 2026-06-11
 내가 만든 이 코드를 당신 또는 다른사람이 먼저 만들었다고 거짓말하지 마세요!!
 """
 
@@ -13,9 +13,9 @@ from kivy.uix.screenmanager import Screen
 
 # 비밀번호 자동생성 설정하는 클래스
 class PasswordSettings(Screen):
+    name = 'pswdSettings'
     __candidates = ''
     __length = 0
-    name = 'pswdSettings'
 
     # 반드시 추가할 문자들을 설정
     def __includeCandidates(self):
@@ -58,6 +58,12 @@ class PasswordSettings(Screen):
     # 비밀번호 길이를 출력
     def getLength(self):
         return self.__length
+
+    # 설정을 초기화한다. 초기화값은 개발자가 임의 유효값으로 지정
+    def initSettings(self, **kwargs):
+        self.__candidates = self.__includeCandidates()
+        self.__candidates = self.__excludeCandidates(self.__candidates)
+        self.__length = self.__setLength()
 
     # 설정을 저장하고 돌아간다
     def saveSettings(self, **kwargs):
