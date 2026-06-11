@@ -21,7 +21,7 @@ source.dir = ./controllers
 source.include_exts = py,png,jpg,kv,atlas,ttf
 
 # (list) List of inclusions using pattern matching
-source.include_patterns = ../structure/*.kv, ../resources/fonts/*.ttf
+source.include_patterns = views/*.kv, resources/fonts/*.ttf
 
 # (list) Source files to exclude (leave empty to not exclude anything)
 #source.exclude_exts = spec

@@ -16,5 +16,8 @@ logger = logging.getLogger()
 logger.setLevel(logging.ERROR)
 
 # logger의 로그를 파일에 저장하게 설정
-file_handler = logging.FileHandler(rootPath() + '/AccountManager.log')
-logger.addHandler(file_handler)
+try:
+    file_handler = logging.FileHandler(rootPath() + '/AccountManager.log')
+    logger.addHandler(file_handler)
+except Exception:
+    pass
