@@ -1,1 +1,1 @@
-{"android:sdk_installation": ["36", "24", "29", "/home/lje64/.buildozer/android/platform/android-sdk", "/home/lje64/.buildozer/android/platform/android-ndk-r29"], "cache.build_id": "2", "android:latestapk": "AccountManager-3.0-arm64-v8a_armeabi-v7a-debug.apk", "android:latestmode": "debug"}
+{"android:sdk_installation": ["36", "24", "29", "/root/.buildozer/android/platform/android-sdk", "/root/.buildozer/android/platform/android-ndk-r29"], "cache.build_id": "2", "android:latestapk": "AccountManager-3.0-arm64-v8a_armeabi-v7a-debug.apk", "android:latestmode": "debug"}

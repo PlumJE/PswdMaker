@@ -12,7 +12,7 @@ title = Account Manager
 package.name = AccountManager
 
 # (str) Package domain (needed for android/ios packaging)
-package.domain = org.test
+package.domain = dev.PlumJE
 
 # (str) Source code where the main.py live
 source.dir = ./controllers
@@ -34,15 +34,15 @@ source.include_patterns = views/*.kv, resources/fonts/*.ttf
 #source.exclude_patterns = license,images/*/*.jpg
 
 # (str) Application versioning (method 1)
-version = 3.0
+version = 4.0
 
 # (str) Application versioning (method 2)
 # version.regex = __version__ = ['"](.*)['"]
 # version.filename = %(source.dir)s/main.py
 
 # (list) Application requirements
-# comma separated e.g. requirements = sqlite3,kivy
-requirements = python3,kivy
+# Pin Python to a version that is known to work better with python-for-android in this build environment.
+requirements = python3==3.13.2,kivy
 
 # (str) Custom source folders for requirements
 # Sets custom source for any requirements with recipes
