@@ -1,12 +1,10 @@
-# Use the official Buildozer base image
+# kivy/buildozer용 이미지 import
 FROM kivy/buildozer:latest
 
-# Set the working directory inside the container
+# root가 아닌 계정으로 전환해서 안전하게 빌드 수행
+USER user
 WORKDIR /home/user/app
 
-# Copy the project files into the container
-COPY . /home/user/app
-
-# Run Buildozer directly when the container starts
+# 빌드
 ENTRYPOINT ["buildozer"]
-CMD ["-v", "android", "debug"]
+CMD ["-v", "android", "debug", "deploy", "run", "logcat"]
